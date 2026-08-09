@@ -53,6 +53,11 @@ export const metadata: Metadata = {
       "Website resmi Desa Jebed Utara, Kecamatan Taman, Kabupaten Pemalang, Jawa Tengah.",
     images: ["/images/hero-bg.png"],
   },
+  icons: {
+    icon: "/images/pemalang-logo.svg",
+    shortcut: "/images/pemalang-logo.svg",
+    apple: "/images/pemalang-logo.png",
+  },
   alternates: {
     canonical: siteUrl,
   },
