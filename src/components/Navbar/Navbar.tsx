@@ -81,10 +81,10 @@ export default function Navbar() {
         <Link href="/" className={styles.logo}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/images/logo.png"
+            src="/images/pemalang-logo.svg"
             alt="Logo Desa Jebed Utara"
-            width={60}
-            height={60}
+            width={44}
+            height={55}
             className={styles.logoImage}
           />
           <span className={styles.logoText}>Desa Jebed Utara</span>

@@ -107,13 +107,13 @@ export default function Informasi() {
   const agendaScrollRef = useRef<HTMLDivElement>(null);
   const galleryScrollRef = useRef<HTMLDivElement>(null);
 
-  const scrollLeft = (ref: React.RefObject<HTMLDivElement>) => {
+  const scrollLeft = (ref: React.RefObject<HTMLDivElement | null>) => {
     if (ref.current) {
       ref.current.scrollBy({ left: -320, behavior: 'smooth' });
     }
   };
 
-  const scrollRight = (ref: React.RefObject<HTMLDivElement>) => {
+  const scrollRight = (ref: React.RefObject<HTMLDivElement | null>) => {
     if (ref.current) {
       ref.current.scrollBy({ left: 320, behavior: 'smooth' });
     }

@@ -39,7 +39,7 @@ export default function LoginPage() {
         <div className={styles.logoArea}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/images/logo.png"
+            src="/images/pemalang-logo.svg"
             alt="Logo Desa Jebed Utara"
             className={styles.logo}
           />

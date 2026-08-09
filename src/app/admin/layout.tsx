@@ -110,7 +110,7 @@ export default function AdminLayout({
         <div className={styles.sidebarHeader}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/images/logo.png"
+            src="/images/pemalang-logo.svg"
             alt="Logo"
             className={styles.sidebarLogo}
           />

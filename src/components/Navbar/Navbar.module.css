@@ -36,8 +36,7 @@
 }
 
 .logoImage {
-  border-radius: 50%;
-  object-fit: cover;
+  object-fit: contain;
   flex-shrink: 0;
 }
 
