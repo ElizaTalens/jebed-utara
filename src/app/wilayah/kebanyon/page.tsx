@@ -1,10 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import styles from "./kebanyon.module.css";
 
-export const metadata = {
-  title: "Dusun Kebanyon - Desa Jebed Utara",
-  description: "Informasi wilayah administrasi Dusun Kebanyon, Desa Jebed Utara, Kecamatan Taman, Kabupaten Pemalang.",
+export const metadata: Metadata = {
+  title: "Dusun Kebanyon - Wilayah Desa Jebed Utara Kabupaten Pemalang",
+  description: "Informasi wilayah administrasi Dusun Kebanyon, Desa Jebed Utara, Kecamatan Taman, Kabupaten Pemalang. Fasilitas, demografi, dan potensi dusun.",
+  alternates: {
+    canonical: "/wilayah/kebanyon",
+  },
 };
 
 const fasilitasData = [

@@ -1,10 +1,18 @@
 import Image from "next/image";
+import type { Metadata } from "next";
 import styles from "./profil.module.css";
 import AnimateInView from "@/components/AnimateInView/AnimateInView";
 
-export const metadata = {
-  title: "Profil Desa - Desa Jebed Utara",
-  description: "Mengenal lebih dekat Desa Jebed Utara, sejarah, visi, misi, dan struktur pemerintahan yang melayani masyarakat.",
+export const metadata: Metadata = {
+  title: "Profil Desa Jebed Utara - Sejarah, Visi Misi & Struktur Organisasi",
+  description: "Mengenal lebih dekat Desa Jebed Utara, Kecamatan Taman, Kabupaten Pemalang. Sejarah desa, visi dan misi, kondisi geografis, serta struktur organisasi pemerintahan desa.",
+  alternates: {
+    canonical: "/profil",
+  },
+  openGraph: {
+    title: "Profil Desa Jebed Utara - Kabupaten Pemalang",
+    description: "Sejarah, visi misi, kondisi geografis, dan struktur organisasi Pemerintah Desa Jebed Utara, Kecamatan Taman, Kabupaten Pemalang.",
+  },
 };
 
 export default function ProfilPage() {

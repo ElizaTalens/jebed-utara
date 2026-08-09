@@ -1,9 +1,13 @@
 import Image from "next/image";
+import type { Metadata } from "next";
 import styles from "./jebed.module.css";
 
-export const metadata = {
-  title: "Dusun Jebed - Desa Jebed Utara",
-  description: "Informasi wilayah administrasi Dusun Jebed, Desa Jebed Utara, Kecamatan Taman, Kabupaten Pemalang.",
+export const metadata: Metadata = {
+  title: "Dusun Jebed - Wilayah Desa Jebed Utara Kabupaten Pemalang",
+  description: "Informasi wilayah administrasi Dusun Jebed, Desa Jebed Utara, Kecamatan Taman, Kabupaten Pemalang. Fasilitas, demografi, dan potensi dusun.",
+  alternates: {
+    canonical: "/wilayah/jebed",
+  },
 };
 
 const fasilitasData = [

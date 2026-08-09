@@ -1,9 +1,13 @@
 import Image from "next/image";
+import type { Metadata } from "next";
 import styles from "./watgalih-selatan.module.css";
 
-export const metadata = {
-  title: "Dusun Watgalih Selatan - Desa Jebed Utara",
-  description: "Informasi wilayah administrasi Dusun Watgalih Selatan, Desa Jebed Utara, Kecamatan Taman, Kabupaten Pemalang.",
+export const metadata: Metadata = {
+  title: "Dusun Watgalih Selatan - Wilayah Desa Jebed Utara Kabupaten Pemalang",
+  description: "Informasi wilayah administrasi Dusun Watgalih Selatan, Desa Jebed Utara, Kecamatan Taman, Kabupaten Pemalang. Fasilitas, demografi, dan potensi dusun.",
+  alternates: {
+    canonical: "/wilayah/watgalih-selatan",
+  },
 };
 
 const fasilitasData = [

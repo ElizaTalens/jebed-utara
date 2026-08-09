@@ -1,11 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import styles from "./potensi.module.css";
 import AnimateInView from "@/components/AnimateInView/AnimateInView";
 
-export const metadata = {
-  title: "Potensi Desa - Desa Jebed Utara",
-  description: "Temukan kekayaan sumber daya alam, warisan pertanian, dan UMKM lokal yang mendorong pertumbuhan komunitas kami.",
+export const metadata: Metadata = {
+  title: "Potensi Desa Jebed Utara - UMKM, Pertanian & Peternakan",
+  description: "Jelajahi potensi ekonomi Desa Jebed Utara, Kabupaten Pemalang. UMKM lokal, pertanian, dan peternakan yang mendorong pertumbuhan komunitas desa.",
+  alternates: {
+    canonical: "/potensi",
+  },
+  openGraph: {
+    title: "Potensi Desa Jebed Utara - Kabupaten Pemalang",
+    description: "UMKM lokal, pertanian, dan peternakan Desa Jebed Utara, Kecamatan Taman, Kabupaten Pemalang.",
+  },
 };
 
 export default function Potensi() {
