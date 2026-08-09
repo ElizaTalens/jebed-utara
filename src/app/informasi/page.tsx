@@ -264,41 +264,54 @@ export default function Informasi() {
                         <th>NAMA DOKUMEN</th>
                         <th>JENIS</th>
                         <th>TAHUN</th>
+                        <th>STATUS</th>
                         <th>AKSI</th>
                       </tr>
                     </thead>
                     <tbody>
                       {currentDokumenItems.length === 0 ? (
                         <tr>
-                          <td colSpan={5} style={{ textAlign: "center", padding: "20px" }}>
+                          <td colSpan={6} style={{ textAlign: "center", padding: "20px" }}>
                             Belum ada dokumen produk hukum.
                           </td>
                         </tr>
                       ) : (
-                        currentDokumenItems.map((doc, index) => (
-                          <tr key={doc.id}>
-                            <td>{indexOfFirstItem + index + 1}</td>
-                            <td className={styles.docName}>{doc.nama_dokumen}</td>
-                            <td>
-                              <span className={styles.docBadge} style={{ backgroundColor: getJenisColor(doc.jenis) }}>
-                                {doc.jenis}
-                              </span>
-                            </td>
-                            <td>{doc.tahun}</td>
-                            <td>
-                              <a
-                                href={doc.file_url || "#"}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className={styles.downloadBtn}
-                                aria-label="Download"
-                                style={{ display: "inline-flex", textDecoration: "none" }}
-                              >
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                              </a>
-                            </td>
-                          </tr>
-                        ))
+                        currentDokumenItems.map((doc, index) => {
+                          const docNameLower = doc.nama_dokumen.toLowerCase();
+                          const isTerverifikasi = docNameLower.includes("perdes") && 
+                                                  docNameLower.includes("nomor 3") && 
+                                                  docNameLower.includes("tahun 2023");
+                          
+                          return (
+                            <tr key={doc.id}>
+                              <td>{indexOfFirstItem + index + 1}</td>
+                              <td className={styles.docName}>{doc.nama_dokumen}</td>
+                              <td>
+                                <span className={styles.docBadge} style={{ backgroundColor: getJenisColor(doc.jenis) }}>
+                                  {doc.jenis}
+                                </span>
+                              </td>
+                              <td>{doc.tahun}</td>
+                              <td>
+                                <span className={isTerverifikasi ? styles.statusBadgeVerified : styles.statusBadgeUnverified}>
+                                  {isTerverifikasi ? "Terverifikasi" : "Belum Terverifikasi"}
+                                </span>
+                              </td>
+                              <td>
+                                <a
+                                  href={doc.file_url || "#"}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className={styles.downloadBtn}
+                                  aria-label="Download"
+                                  style={{ display: "inline-flex", textDecoration: "none" }}
+                                >
+                                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                </a>
+                              </td>
+                            </tr>
+                          );
+                        })
                       )}
                     </tbody>
                   </table>

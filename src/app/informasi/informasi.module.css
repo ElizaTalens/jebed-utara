@@ -404,6 +404,28 @@
   letter-spacing: 0.04em;
 }
 
+.statusBadgeVerified {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #15803d;
+  background-color: #dcfce7;
+  letter-spacing: 0.04em;
+}
+
+.statusBadgeUnverified {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #b91c1c;
+  background-color: #fee2e2;
+  letter-spacing: 0.04em;
+}
+
 .downloadBtn {
   background: none;
   border: none;
