@@ -61,13 +61,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: siteUrl,
   },
-  ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
-    ? {
-        verification: {
-          google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
-        },
-      }
-    : {}),
+  verification: {
+    google: "L4WkqNyunkVTxeqTziOegdycX2BYWxEITTZFoDkUgSM",
+  },
 };
 
 // JSON-LD Structured Data
