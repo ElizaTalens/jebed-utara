@@ -1,0 +1,377 @@
+.main {
+  min-height: 100vh;
+  background-color: #f8fafc;
+  font-family: var(--font-inter), sans-serif;
+}
+
+/* Hero Banner */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+}
+
+.heroImage {
+  object-fit: cover;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(15, 23, 42, 0.88) 0%, rgba(15, 23, 42, 0.5) 60%, transparent 100%);
+  display: flex;
+  align-items: center;
+}
+
+.heroContent {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding, 24px);
+  width: 100%;
+  padding-top: 80px; /* account for navbar */
+}
+
+.heroBadge {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4px);
+  color: #cbd5e1;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.heroTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 16px;
+  line-height: 1.15;
+  max-width: 500px;
+}
+
+.heroDesc {
+  font-size: 1rem;
+  color: #cbd5e1;
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding, 24px);
+}
+
+/* Filter Section */
+.filterSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 30px 0 20px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.filterLeft {
+  display: flex;
+  align-items: flex-end;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.filterLabel {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.filterTabs {
+  display: flex;
+  gap: 8px;
+}
+
+.filterTab {
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  background: white;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filterTab:hover {
+  border-color: #cbd5e1;
+  color: #334155;
+}
+
+.filterTabActive {
+  background: #334155;
+  color: white;
+  border-color: #334155;
+}
+
+.filterTabActive:hover {
+  background: #1e293b;
+  color: white;
+  border-color: #1e293b;
+}
+
+/* Select Dropdown */
+.selectWrapper {
+  position: relative;
+}
+
+.select {
+  appearance: none;
+  padding: 8px 40px 8px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: white;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #334155;
+  cursor: pointer;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+.select:focus {
+  outline: none;
+  border-color: #94a3b8;
+}
+
+.selectIcon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  pointer-events: none;
+}
+
+/* Search */
+.searchBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 8px 16px;
+  color: #94a3b8;
+}
+
+.searchInput {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.9rem;
+  font-family: inherit;
+  color: #334155;
+  width: 180px;
+}
+
+.searchInput::placeholder {
+  color: #94a3b8;
+}
+
+/* UMKM Grid */
+.gridSection {
+  padding: 20px 0 60px;
+}
+
+.umkmGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.umkmCard {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px -3px rgba(0, 0, 0, 0.06);
+  border: 1px solid #f1f5f9;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.umkmCard:hover {
+  box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.umkmImageWrapper {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.umkmImage {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.umkmCard:hover .umkmImage {
+  transform: scale(1.05);
+}
+
+.umkmCategoryBadge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 4px 10px;
+  border-radius: 5px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.06em;
+  z-index: 2;
+}
+
+.umkmContent {
+  padding: 18px;
+}
+
+.umkmLocation {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin-bottom: 8px;
+}
+
+.umkmName {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.hubungiBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #334155;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-family: inherit;
+}
+
+.hubungiBtn:hover {
+  background: #1e293b;
+}
+
+/* Empty State */
+.emptyState {
+  text-align: center;
+  padding: 60px 0;
+  color: #94a3b8;
+  font-size: 1rem;
+}
+
+/* Load More Button */
+.loadMoreWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.loadMoreBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.loadMoreBtn:hover {
+  border-color: #94a3b8;
+  color: #1e293b;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .umkmGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 350px;
+  }
+
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .umkmGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .filterSection {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filterLeft {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .filterTabs {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 300px;
+  }
+
+  .heroTitle {
+    font-size: 1.6rem;
+  }
+
+  .umkmGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .umkmImageWrapper {
+    height: 180px;
+  }
+}

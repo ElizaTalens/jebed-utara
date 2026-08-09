@@ -1,0 +1,228 @@
+.mengenal {
+  padding: 80px 0;
+  background: var(--color-bg);
+}
+
+.mengenalContainer {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+/* Section Header */
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.sectionTitle {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--color-text-dark);
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+
+.sectionSubtitle {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ===========================
+   Card Base
+   =========================== */
+.card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  border: 1px solid var(--color-border);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.cardIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+  margin-bottom: 18px;
+  font-size: 1.2rem;
+}
+
+.cardIconAccent {
+  background: rgba(74, 103, 65, 0.1);
+  color: var(--color-accent);
+}
+
+.cardIconBlue {
+  background: rgba(44, 62, 80, 0.08);
+  color: var(--color-primary);
+}
+
+.cardTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-text-dark);
+  margin-bottom: 10px;
+}
+
+.cardDescription {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+/* ===========================
+   Visi & Misi Row
+   =========================== */
+.visiMisiRow {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.cardVisiMisi {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===========================
+   Stats & Map Grid
+   =========================== */
+.statsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  gap: 20px;
+}
+
+/* Stat Card */
+.cardStat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 32px 24px;
+}
+
+.statNumber {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--color-text-dark);
+  line-height: 1;
+  margin-bottom: 6px;
+  margin-top: 14px;
+}
+
+.statLabel {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+/* Kondisi Geografis Card */
+.cardGeografis {
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  min-height: 240px;
+}
+
+.geografisImage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 240px;
+}
+
+.geografisContent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 28px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+  z-index: 2;
+}
+
+.geografisTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 4px;
+}
+
+.geografisDesc {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ===========================
+   Responsive — Tablet
+   =========================== */
+@media (max-width: 768px) {
+  .mengenal {
+    padding: 60px 0;
+  }
+
+  .sectionTitle {
+    font-size: 1.55rem;
+  }
+
+  .visiMisiRow {
+    grid-template-columns: 1fr;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cardGeografis {
+    grid-column: 1 / 3;
+  }
+}
+
+/* ===========================
+   Responsive — Mobile
+   =========================== */
+@media (max-width: 480px) {
+  .mengenal {
+    padding: 40px 0;
+  }
+
+  .sectionTitle {
+    font-size: 1.35rem;
+  }
+
+  .sectionSubtitle {
+    font-size: 0.85rem;
+  }
+
+  .visiMisiRow {
+    grid-template-columns: 1fr;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .cardGeografis {
+    grid-column: 1;
+    min-height: 220px;
+  }
+
+  .statNumber {
+    font-size: 1.85rem;
+  }
+}

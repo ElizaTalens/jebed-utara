@@ -1,0 +1,124 @@
+.sambutan {
+  padding: 80px 0;
+  background: var(--color-white);
+}
+
+.sambutanContainer {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+/* Image Side */
+.imageWrapper {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  aspect-ratio: 4 / 5;
+  max-height: 520px;
+}
+
+.imageWrapper img {
+  object-fit: cover;
+}
+
+/* Text Side */
+.textContent {
+  padding: 8px 0;
+}
+
+.label {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  margin-bottom: 12px;
+  letter-spacing: 0.02em;
+}
+
+.heading {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--color-text-dark);
+  line-height: 1.25;
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+}
+
+.paragraph {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+
+.signature {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-border);
+}
+
+.signatureName {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text-dark);
+  margin-bottom: 2px;
+}
+
+.signatureRole {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sambutan {
+    padding: 60px 0;
+  }
+
+  .sambutanContainer {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .imageWrapper {
+    max-height: 400px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .heading {
+    font-size: 1.55rem;
+  }
+
+  .textContent {
+    text-align: center;
+  }
+
+  .signature {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .sambutan {
+    padding: 40px 0;
+  }
+
+  .imageWrapper {
+    max-height: 340px;
+  }
+
+  .heading {
+    font-size: 1.35rem;
+  }
+
+  .paragraph {
+    font-size: 0.85rem;
+  }
+}

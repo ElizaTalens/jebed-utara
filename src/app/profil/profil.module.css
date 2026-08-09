@@ -1,0 +1,472 @@
+.main {
+  padding-top: 80px; /* Account for fixed navbar */
+  min-height: 100vh;
+  background-color: #f8fafc; /* Light gray background to match design */
+  font-family: var(--font-inter), sans-serif;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding, 24px);
+}
+
+.section {
+  padding: 60px 0;
+}
+
+/* Header */
+.header {
+  padding: 60px 0 20px;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #334155; /* Dark slate */
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.sectionHeader {
+  margin-bottom: 30px;
+}
+
+.sectionTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #334155;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sectionTitle::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 24px;
+  background-color: #3b82f6;
+  border-radius: 4px;
+}
+
+/* Sejarah Grid */
+.sejarahGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.sejarahText {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.sejarahImageWrapper {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  aspect-ratio: 16 / 9;
+}
+
+.sejarahImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Visi Misi Grid */
+.visiMisiGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.visiBox {
+  background-color: #3b4b60; /* Dark blue/gray */
+  color: white;
+  padding: 40px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.visiHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.visiHeader h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.icon {
+  color: #94a3b8;
+}
+
+.visiText {
+  font-size: 1.1rem;
+  font-style: italic;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+.misiBox {
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.05);
+}
+
+.misiHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.misiHeader h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #334155;
+}
+
+.iconDark {
+  color: #64748b;
+}
+
+.misiList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.misiList li {
+  display: flex;
+  gap: 16px;
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.misiList li span {
+  font-weight: 700;
+  color: #3b82f6;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* Kondisi Geografis */
+.geografisGrid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 24px;
+}
+
+.geoMapBox {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  aspect-ratio: 16 / 9;
+}
+
+.geoMapImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mapBadge {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 10px 16px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #334155;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.geoStatsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.geoStatCard {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.05);
+  flex: 1;
+}
+
+.geoStatHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  color: #334155;
+}
+
+.geoStatHeader h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.geoStatCard p {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.7;
+}
+
+.geoStatsBottomGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.geoStatSmallCard {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.geoStatLabel {
+  font-size: 0.85rem;
+  color: #64748b;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.geoStatValue {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #334155;
+}
+
+/* Struktur Organisasi */
+.sectionOrg {
+  background-color: transparent;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.orgHeader {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.orgHeader h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #334155;
+  margin-bottom: 12px;
+}
+
+.orgHeader p {
+  color: #64748b;
+  font-size: 0.95rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.orgChartContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.orgNodeTop {
+  z-index: 2;
+}
+
+.orgCard {
+  background: white;
+  padding: 24px 32px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 220px;
+}
+
+.orgAvatar {
+  border-radius: 50%;
+  margin-bottom: 16px;
+  border: 4px solid #f1f5f9;
+}
+
+.orgName {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 4px;
+}
+
+.orgTitle {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #64748b;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.orgTitleStaff {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+/* Connecting Lines */
+.orgLineWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px; /* Width of the horizontal bar */
+}
+
+.orgLineVertical {
+  width: 2px;
+  height: 40px;
+  background-color: #cbd5e1;
+}
+
+.orgLineHorizontal {
+  width: 100%;
+  height: 2px;
+  background-color: #cbd5e1;
+}
+
+.orgStaffGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  width: 100%;
+  gap: 30px;
+  justify-items: center;
+  margin-top: 20px;
+}
+
+.orgStaffGroup {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.orgStaffGroupTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #334155;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid #cbd5e1;
+  padding-bottom: 8px;
+}
+
+.orgStaffNode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.orgStaffLineVertical {
+  width: 2px;
+  height: 40px;
+  background-color: #cbd5e1;
+}
+
+/* Responsiveness */
+@media (max-width: 900px) {
+  .sejarahGrid,
+  .visiMisiGrid,
+  .geografisGrid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .geoMapBox {
+    aspect-ratio: 16 / 10;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .orgLineHorizontal {
+    display: none;
+  }
+  
+  .orgStaffGrid {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+  
+  .orgStaffNode {
+    width: 100%;
+  }
+
+  /* The first staff gets the straight vertical line from Top Node */
+  /* Remove other vertical lines or adjust for mobile tree */
+  .orgLineWrapper {
+    height: 40px;
+  }
+  
+  .orgStaffLineVertical {
+    display: none;
+  }
+  
+  .orgCard {
+    width: 100%;
+    max-width: 260px;
+  }
+  
+  .sectionOrg {
+    margin: 0;
+    border-radius: 0;
+    padding: 0 var(--container-padding, 24px);
+  }
+}
