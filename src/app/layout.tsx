@@ -59,6 +59,10 @@ export const metadata: Metadata = {
   verification: {
     google: "L4WkqNyunkVTxeqTziOegdycX2BYWxEITTZFoDkUgSM",
   },
+  icons: {
+    icon: "/images/pemalang-logo.svg",
+    apple: "/images/pemalang-logo.svg",
+  },
 };
 
 // JSON-LD Structured Data

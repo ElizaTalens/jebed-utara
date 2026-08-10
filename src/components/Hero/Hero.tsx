@@ -9,7 +9,7 @@ export default function Hero() {
       {/* Background Image */}
       <div className={styles.heroBg}>
         <Image
-          src="/images/hero-bg.png"
+          src="/images/hero-bg.jpg"
           alt="Pemandangan Desa Jebed Utara"
           fill
           style={{ objectFit: "cover" }}
