@@ -48,7 +48,7 @@ export default function ProfilPage() {
             </div>
             <div className={styles.sejarahImageWrapper}>
               <Image
-                src="/images/sejarah-desa.png"
+                src="/images/sejarah-desa-new.jpg"
                 alt="Pemandangan Desa Jebed Utara"
                 width={800}
                 height={500}
